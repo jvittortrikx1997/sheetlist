@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
-
+use App\Http\Controllers\CompanyController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,4 +24,11 @@ Route::middleware('auth:sanctum')->group(function () {
 
         Route::get('/get_user', [AuthController::class, 'user']);
     });
+
+    Route::prefix('companies')->group(function () {
+        Route::post('/create', [CompanyController::class, 'create']);
+        Route::get('/list', [CompanyController::class, 'list']);
+    });
+
+
 });

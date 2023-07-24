@@ -18,6 +18,10 @@ Route::get('/login', function(){
     return view('index');
 })->name('login');
 
+Route::get('/parameters', function(){
+    return view('app.parameters');
+})->name('parameters');
+
 Route::get('/home', function(){
     return view('app.home');
 })->name('home');

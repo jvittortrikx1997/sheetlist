@@ -18,6 +18,10 @@ Route::get('/login', function(){
     return view('index');
 })->name('login');
 
+Route::get('/home', function(){
+    return view('app.home');
+})->name('home');
+
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
 

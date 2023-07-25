@@ -4,30 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard com Menu Lateral</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Dashboard Moderno - Estilo Spotify</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        /* Estilo personalizado para o menu lateral */
+        /* Estilo para o menu lateral */
         .sidebar {
-            height: 100%;
+            height: 100vh;
             width: 250px;
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #333;
+            background-color: #040306;
             padding-top: 15px;
+            color: #0c258a;
         }
 
         .sidebar a {
-            padding: 8px 8px 8px 16px;
+            padding: 8px 16px;
             text-decoration: none;
             font-size: 18px;
-            color: white;
+            color: #0c258a;
             display: block;
+            transition: 0.2s;
         }
 
         .sidebar a:hover {
-            background-color: #444;
+            background-color: #1c1c1c;
+        }
+
+        /* Estilo para o cabeçalho do conteúdo principal */
+        .main-header {
+            background-color: #1c1c1c;
+            padding: 15px;
+            color: white;
         }
 
         /* Estilo para o conteúdo principal */
@@ -35,79 +44,20 @@
             margin-left: 250px;
             padding: 20px;
         }
-
-        /* Estilo para esconder o menu lateral em telas menores */
-        @media screen and (max-width: 768px) {
-            .sidebar {
-                display: none;
-            }
-
-            .content {
-                margin-left: 0;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <!-- Menu lateral -->
-    <div class="sidebar">
-        <a href="#">Página 1</a>
-        <a href="#">Página 2</a>
-        <a href="#">Página 3</a>
-        <a href="#">Página 4</a>
-    </div>
-
+    @extends('utils.menu')
     <!-- Conteúdo principal -->
     <div class="content">
-        <h1>Bem-vindo ao Dashboard!</h1>
-        <div class="row mt-5">
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Card 1</h5>
-                    </div>
-                    <div class="card-body">
-                        Card Info
-                    </div>
-                    <div class="card-footer">
-                        <button type="button" class="btn btn-primary">Ok</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Card 2</h5>
-                    </div>
-                    <div class="card-body">
-                        Card Info
-                    </div>
-                    <div class="card-footer">
-                        <button type="button" class="btn btn-secondary">Teste</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Card 3</h5>
-                    </div>
-                    <div class="card-body">
-                        Card Info
-                    </div>
-                    <div class="card-footer">
-                        <button type="button" class="btn btn-info">Info</button>
-                    </div>
-                </div>
-            </div>
+        <div class="main-header">
+            <h1>Bem-vindo ao Dashboard Moderno - Estilo Spotify!</h1>
         </div>
-        
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Configurations;
 
-use App\Repositories\CompanyRepository;
+use App\Http\Controllers\Controller;
+use App\Repositories\Configurations\CompanyRepository;
 use App\Utils\ExceptionReturn;
 use App\Utils\ValidateRequest;
 use App\Utils\ValidateReturn;

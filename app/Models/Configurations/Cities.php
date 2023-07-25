@@ -1,28 +1,25 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Configurations;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Companies Extends Model
+class Cities extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'companies';
+    protected $table = 'cities';
 
     protected $fillable = [
         'name',
+        'state',
     ];
 
     protected $hidden = [
         'updated_at',
         'created_at',
         'deleted_at'
-    ];
-
-    protected $casts = [
-        'email_verified_at' => 'datetime',
     ];
 
 }
